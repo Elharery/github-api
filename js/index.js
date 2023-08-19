@@ -35,7 +35,8 @@ btn.onclick = () => {
           let repoNameA = document.createElement("a");
           repoNameA.className = "repo-name";
           let repoName = document.createTextNode(result[i].name);
-          repoNameA.href = `https://${user.value}.github.io/${result[i].name}`;
+          repoNameA.href = `https://github.com/${user.value}/${result[i].name}`;
+          // repoNameA.href = `https://${user.value}.github.io/${result[i].name}`;
           repoNameA.target = "blank"
           createReopDiv.appendChild(repoNameA);
           parentRepos.before(userNameRepo);
