@@ -2,6 +2,17 @@ const btn = document.getElementById("btn");
 // const repoName = document.querySelector(".repo-name");
 const userNameRepo = document.getElementById("userName-repo");
 let user = document.getElementById("user");
+const showed = document.getElementById("showedRepo")
+
+
+// function showSetTime() {
+//   showed.style.opacity = "0";
+// }
+
+// function showRepo() {
+//   showed.style.opacity = "1";
+// }
+
 btn.onclick = () => {
   if (user.value) {
     fetch(`https://api.github.com/users/${user.value}/repos`)
@@ -37,6 +48,10 @@ btn.onclick = () => {
           // repos.appendChild(createReopDiv)
         }
         user.value = "";
+        // showRepo()
+        // setTimeout(() => {
+        //   showed.style.opacity = "0";
+        // }, 2000)
       });
   } else {
     alert("Please Write A Repo");
