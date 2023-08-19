@@ -60,6 +60,7 @@ body{
   display: flex;
   justify-content: center;
   padding: 5px;
+  font-size: 25px;
 }
 .repo-name{
   display: block;
