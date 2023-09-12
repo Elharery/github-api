@@ -46,7 +46,7 @@ btn.addEventListener("click", () => {
       username.appendChild(document.createTextNode(result.login))
       // console.log(result.login);
       username.id = "username";
-      username.style = "padding-top: 5px; width: fit-content; margin: 0 auto; display: block;"
+      username.style = "padding-top: 5px; width: fit-content; margin: 0 auto 5px; display: block;"
       //
       let follow = document.createElement("div");
       follow.className = "follows";
@@ -59,6 +59,12 @@ btn.addEventListener("click", () => {
       // console.log(`${result.following} Following`);
       // span2.innerHTML = `${result[m].following} Following`
       span2.appendChild(document.createTextNode(`${result.following} Following`))
+        let repos = document.createElement("h4");
+        repos.className = "number-of-repo"
+      // span2.style = "padding: 10px;"
+      // console.log(`${result.following} Following`);
+      // span2.innerHTML = `${result[m].following} Following`
+      repos.appendChild(document.createTextNode(`${result.public_repos} Repos`))
       //
       if (username.innerHTML === "undefined") {
         userBox.style = "display: none;";
@@ -74,10 +80,11 @@ btn.addEventListener("click", () => {
       }
       // append
       imgDiv.appendChild(img)
+      info.appendChild(username)
       follow.appendChild(span1)
       follow.appendChild(span2)
+      follow.appendChild(repos)
       info.appendChild(follow)
-      info.appendChild(username)
       top.appendChild(imgDiv)
       top.appendChild(info)
       userBox.appendChild(top)

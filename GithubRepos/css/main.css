@@ -176,6 +176,11 @@ color: #fff;
 input::placeholder{
   color: gray;
 }
+.number-of-repo{
+  width: fit-content;
+    margin: 5px auto;
+    font-weight: 100;
+}
 @media (max-width: 767px){
   .repos{
     /* padding: 10px; */
